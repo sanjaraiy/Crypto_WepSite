@@ -18,7 +18,22 @@ function SideNav() {
   ];
 
   return (
-    <Stack justify="space-between" boxShadow="lg" maxW="16rem" h="100vh">
+
+
+    <Stack 
+    bg="white"
+    justify="space-between" boxShadow={{
+      base:"none",
+      lg:"lg",
+    }} 
+    w={{
+      base:"full",
+      lg:"16rem",
+    }}
+    h="100vh"
+    //  h="100vh"
+      
+    >
       <Box w="250px">
         <Heading textAlign="center" fontSize="20px" as="h1" pt="40px">
           @CODEAURCODING
