@@ -8,7 +8,6 @@ function DashboardLayout({title,children}) {
   return (
    
         <Flex>
-            
             <Box
              display={{
              base:"none",
@@ -20,7 +19,7 @@ function DashboardLayout({title,children}) {
             <SideDrawer  isOpen={isOpen} onClose={onClose}></SideDrawer>
             <Box flexGrow={1}>
                 <TopNav title={title} onOpen={onOpen}></TopNav>
-                <Container mt="6px" maxW="60rem" px="4">{children}</Container>
+                <Container overflowX="hidden" overflowY="auto" h="calc(100vh - 88px)" mt="6px" maxW="60rem" px="4">{children}</Container>
             </Box>
         </Flex>
     

@@ -23,7 +23,7 @@ function PriceSection() {
   const timestmps = ["7:15 PM", "7:55 PM", "8:55 PM", "9:55 PM", "10:55 PM"];
 
   return (
-    <CustomCard mt="20px">
+    <CustomCard mt="5px" h="full">
       <Flex justify="space-between" align="start">
         <Stack>
           <HStack color="black.80">

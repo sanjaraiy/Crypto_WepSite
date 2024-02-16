@@ -15,7 +15,7 @@ function SideDrawer({isOpen,onClose}) {
     return (
       <>
         
-        <Drawer
+        <Drawer 
           isOpen={isOpen}
           placement='left'
           onClose={onClose}
