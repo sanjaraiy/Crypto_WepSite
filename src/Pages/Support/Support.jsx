@@ -1,8 +1,8 @@
-import React from 'react'
+import DashboardLayout from "../../components/DashboardLayout"
 
 function Support() {
   return (
-    <div>Support</div>
+    <DashboardLayout>Support</DashboardLayout>
   )
 }
 
