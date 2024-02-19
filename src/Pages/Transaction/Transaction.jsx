@@ -2,8 +2,19 @@ import { Flex, Button, Card, Icon, HStack } from "@chakra-ui/react";
 import React from "react";
 import DashboardLayout from "../../components/DashboardLayout";
 import { MdOutlineFileDownload } from "react-icons/md";
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Tag,InputGroup, InputLeftElement,Input } from "@chakra-ui/react";
-import { IoSearch } from "react-icons/io5"
+import {
+  Tabs,
+  TabList,
+  TabPanels,
+  Tab,
+  TabPanel,
+  Tag,
+  InputGroup,
+  InputLeftElement,
+  Input,
+  Stack,
+} from "@chakra-ui/react";
+import { IoSearch } from "react-icons/io5";
 import TransactionTable from "./components/TransactionTable";
 
 function TransactionPage() {
@@ -26,7 +37,7 @@ function TransactionPage() {
     },
   ];
   return (
-    <DashboardLayout>
+    <DashboardLayout title="Transactions" >
       <Flex justify="end" mt="6" mb="3">
         <Button leftIcon={<Icon as={MdOutlineFileDownload}></Icon>}>
           Export CSV
@@ -35,16 +46,16 @@ function TransactionPage() {
       <Card>
         <Tabs>
           <TabList pt="4" display="flex" justifyContent="space-between">
-           <HStack>
-           {tabs.map((tab) => (
-              <Tab key={tab.name} display="flex" gap="2" pb="4">
-                {tab.name}{" "}
-                <Tag colorScheme="gray" borderRadius="full">
-                  {tab.count}
-                </Tag>
-              </Tab>
-            ))}
-           </HStack>
+            <HStack>
+              {tabs.map((tab) => (
+                <Tab key={tab.name} display="flex" gap="2" pb="4">
+                  {tab.name}{" "}
+                  <Tag colorScheme="gray" borderRadius="full">
+                    {tab.count}
+                  </Tag>
+                </Tab>
+              ))}
+            </HStack>
 
             <InputGroup maxW="250px" pr="6">
               <InputLeftElement pointerEvents="none">
@@ -54,16 +65,13 @@ function TransactionPage() {
             </InputGroup>
 
           </TabList>
+
           <TabPanels>
             <TabPanel>
               <TransactionTable></TransactionTable>
             </TabPanel>
-            <TabPanel>
-              <p>two!</p>
-            </TabPanel>
-            <TabPanel>
-              <p>three!</p>
-            </TabPanel>
+            <TabPanel></TabPanel>
+            <TabPanel></TabPanel>
           </TabPanels>
         </Tabs>
       </Card>

@@ -7,11 +7,11 @@ import {
     Tr,
     Th,
     Td,
-    
     TableContainer,
     Stack,
     Tag
   } from '@chakra-ui/react'
+  
 function TransactionTable() {
     
   const tableData = [
@@ -87,7 +87,7 @@ function TransactionTable() {
     completed: "#059669",
     cancelled: "#DC2626",
   };
-  
+
 return (
   <TableContainer>
   <Table variant="simple" colorScheme="gray">
